@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Martel Sans", sans-serif;
+}
+
+/* Main background */
+main {
+  background-image: url("items/IN-en-20251020-TRIFECTA-perspective_d6da84e9-6145-4b1e-bb51-e402c966a045_large.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+main .box {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+/* Navbar */
+nav {
+  z-index: 10;
+  background: transparent;
+}
+
+.logo {
+  width: 155px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* Buttons container — Bootstrap handles flex, so only keep gap for consistency */
+.nav-buttons {
+  gap: 18px;
+}
+
+/* Hero Section */
+.hero {
+  color: white;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  padding: 0 20px;
+  font-family: "Martel Sans", sans-serif;
+}
+
+/* Headline */
+.hero> :nth-child(1),
+.hero> :nth-child(2) {
+  font-weight: 900;
+  font-size: 3rem;
+  /* ≈48px */
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Subheading (₹149 line) */
+.hero> :nth-child(3) {
+  font-weight: 600;
+  font-size: 1.3rem;
+  /* ≈21px */
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Email section line */
+.hero> :nth-child(4) {
+  font-weight: 400;
+  font-size: 1rem;
+  /* ≈16px */
+  line-height: 1.5;
+  max-width: 700px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .hero> :nth-child(1),
+  .hero> :nth-child(2) {
+    font-size: 2rem;
+    /* ≈32px */
+  }
+
+  .hero> :nth-child(3) {
+    font-size: 1.1rem;
+  }
+
+  .hero> :nth-child(4) {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Language button (Bootstrap keeps select style consistent) */
+.lang-btn {
+  background-color: rgba(128, 128, 128, 0.127) !important;
+  /* same as footer */
+  color: rgba(255, 255, 255, 0.938) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 4px !important;
+  padding: 5px 25px !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover + focus (Netflix-style red glow) */
+.lang-btn:hover,
+.lang-btn:focus {
+  border-color: #fffcfd !important;
+  box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+}
+
+/* Dropdown menu text (when opened) */
+.lang-btn option {
+  color: black;
+  background-color: white;
+}
+
+/* Sign-in button */
+.sign-btn {
+  background-color: #e50914 !important;
+  /* Netflix red */
+  color: white !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  /* balanced size */
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  line-height: 1.4 !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.1s ease;
+  height: auto !important;
+  /* adjusts naturally */
+  min-width: 100px;
+  /* gives that wide look */
+  text-align: center;
+}
+
+.sign-btn:hover {
+  background-color: #c11119 !important;
+  /* darker Netflix red */
+  transform: scale(1.03);
+  /* smooth hover pop effect */
+}
+
+
+
+/* Get started section */
+.get-started-btn {
+  background-color: #e50914 !important;
+  color: white !important;
+  border: none;
+  padding: 15px 48px;
+  font-size: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #c10710 !important;
+}
+
+/* Email container — Bootstrap handles flex, keep margin */
+.email-container {
+  margin-top: 10px;
+}
+
+/* Input box */
+.input {
+  padding: 20px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 380px;
+  max-width: 80%;
+  background-color: rgba(29, 27, 27, 0.762);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+  background-color: rgba(29, 27, 27, 0.9);
+  color: white;
+  border: 1px solid #ece9e9;
+  /* Netflix red glow */
+  box-shadow: 0 0 5px rgba(229, 9, 20, 0.6);
+  /* subtle glow effect */
+  outline: none;
+}
+
+/* Separation line */
+.separation-curve {
+  height: 4px;
+  background-color: rgba(128, 128, 128, 0.514);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    width: 110px;
+  }
+
+  .sign-btn,
+  .lang-btn {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .hero {
+    margin-top: 50px;
+  }
+}
+
+/* Trending Section */
+.trending-section {
+  background: linear-gradient(to bottom, #0a0a0a, black);
+  border-top: 4px solid #c11119;
+  /* Netflix red curve border */
+  position: relative;
+}
+
+.trending-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Movie Cards */
+.movie-card {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Movie Number Overlay */
+.movie-rank {
+  position: absolute;
+  bottom: 5px;
+  left: -15px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgb(2, 2, 2);
+
+  -webkit-text-stroke: 2px rgb(255, 252, 252);
+  font-family: Arial, sans-serif;
+}
+
+/* Carousel controls customization */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* More Reasons Section */
+.reasons-section {
+  background-color: black;
+  padding: 60px 0;
+}
+
+.reasons-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+/* Card Styling */
+.reason-card {
+  background: linear-gradient(145deg, #1a093a, #0b0b0b);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  height: 320px;
+}
+
+.reason-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+}
+
+/* Icon Styling */
+.reason-icon {
+  width: 55px;
+  height: auto;
+  align-self: flex-end;
+  opacity: 0.9;
+}
+
+/* Text tweaks */
+.reason-card h5 {
+  font-size: 2.5rem;
+}
+
+.reason-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reasons-section h2 {
+    text-align: center;
+  }
+
+  .reason-card {
+    text-align: center;
+  }
+
+  .reason-icon {
+    align-self: center;
+  }
+}
+
+/* ========================
+   Netflix FAQ Section
+======================== */
+.faq {
+  background-color: black;
+  color: white;
+  padding: 80px 12%;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+/* Accordion Container */
+.accordion {
+  margin: 0 auto;
+  max-width: 950px;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+/* Each accordion item */
+.accordion li {
+  margin-bottom: 8px;
+  width: 100%;
+  background-color: #2d2d2d;
+}
+
+/* Question labels */
+.accordion label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.accordion label:hover {
+  background-color: #3a3a3a;
+}
+
+/* Add + icon to the right */
+.accordion label::after {
+  content: '+';
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Hide radio buttons */
+.accordion input[type="radio"] {
+  display: none;
+}
+
+/* Answer content */
+.accordion .content {
+  background-color: #2d2d2d;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border-top: 1px solid black;
+}
+
+.accordion .content p {
+  padding: 22px 30px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Expand when active */
+.accordion input[type="radio"]:checked+label+.content {
+  max-height: 1000px;
+  padding-bottom: 10px;
+}
+
+/* Change + to × when opened */
+.accordion input[type="radio"]:checked+label::after {
+  content: '×';
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq {
+    padding: 60px 5%;
+  }
+
+  .faq h2 {
+    font-size: 1.8rem;
+  }
+
+  .accordion label {
+    font-size: 1.1rem;
+    padding: 18px 20px;
+  }
+
+  .accordion .content p {
+    font-size: 0.95rem;
+    padding: 18px 20px;
+  }
+}
+
+/* ======= Call to Action Section ======= */
+.cta-section {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta-input {
+  width: 380px;
+  max-width: 90%;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.cta-input:focus {
+  outline: none;
+  border: 1px solid #e50914;
+}
+
+.cta-btn {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 18px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #c11119;
+}
+
+/* ======= Footer Section ======= */
+.footer {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 60px 12%;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px 25px;
+  margin-bottom: 30px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-lang select {
+  background-color: rgba(128, 128, 128, 0.282);
+  color: rgba(255, 255, 255, 0.938);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 5px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+
+/* ✅ Dropdown text color when opened */
+.footer-lang select option {
+  color: black;
+  /* text inside dropdown */
+  background-color: white;
+  /* background for dropdown items */
+}
+
+
+
+
+.footer-country {
+  margin-top: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 10px;
+  }
+
+  .cta-btn {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .cta-input {
+    width: 90%;
+  }
+
+  .footer {
+    padding: 50px 6%;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

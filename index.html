@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-transparent position-absolute top-0 w-100 py-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-5">
+            <img src="items/logo.svg" alt="Netflix Logo" class="logo">
+
+            <!-- Navbar right side -->
+            <div class="nav-buttons d-flex align-items-center justify-content-center gap-3">
+                <select class="form-select bg-transparent text-white border border-light lang-btn">
+                    <option>English</option>
+                    <option>हिन्दी</option>
+                </select>
+                <button class="btn btn-danger sign-btn"><strong>Sign In</strong></button>
+            </div>
+    </nav>
+
+    <main>
+        <div class="box"></div>
+
+        <div class="hero container text-center d-flex flex-column justify-content-center align-items-center">
+            <span class="fw-bold fs-1">Unlimited movies, TV</span>
+            <span class="fw-bold fs-1">shows and more</span>
+            <span class="fs-5 fw-semibold">Starts at ₹149. Cancel at any time.</span>
+            <span class="fs-6">Ready to watch? Enter your email to create or restart your membership.</span>
+
+            <div class="email-container mt-3 d-flex flex-wrap justify-content-center gap-2">
+                <input type="email" class="form-control input text-white" placeholder="Email address">
+                <button class="btn btn-danger get-started-btn"><strong>Get Started &#8250;</strong></button>
+            </div>
+        </div>
+
+        <div class="separation-curve mt-4"></div>
+    </main>
+    <section class="trending-section py-5">
+        <div class="container">
+            <h2 class="text-white fw-bold mb-4">Trending Now</h2>
+
+            <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center flex-wrap gap-4">
+
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card1.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">1</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card2.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">2</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card3.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">3</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/crad4.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">4</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card5.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">5</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card6.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">6</span>
+                            </div>
+                            <!-- Movie 1 -->
+                            <div class="movie-card position-relative">
+                                <img src="items/card7.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">7</span>
+                            </div>
+                            <div class="movie-card position-relative">
+                                <img src="items/card8.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">8</span>
+                            </div>
+                            <div class="movie-card position-relative">
+                                <img src="items/card9.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">9</span>
+                            </div>
+                            <div class="movie-card position-relative">
+                                <img src="items/card10.jpg" class="img-fluid rounded" alt="Movie 1">
+                                <span class="movie-rank">10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#trendingCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#trendingCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="reasons-section py-5">
+        <div class="container text-white">
+            <h2 class="fw-bold mb-4">More reasons to join</h2>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="reason-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold">Enjoy on your TV</h4>
+                            <p class="text-light mt-2">
+                                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                            </p>
+                        </div>
+                        <img src="items/monitor.png" alt="TV Icon" class="reason-icon mt-3">
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="reason-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold">Download your shows to watch offline</h4>
+                            <p class="text-light mt-2">
+                                Save your favourites easily and always have something to watch.
+                            </p>
+                        </div>
+                        <img src="items/down-arrow.png" alt="Download Icon" class="reason-icon mt-3">
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="reason-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold">Watch everywhere</h4>
+                            <p class="text-light mt-2">
+                                Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.
+                            </p>
+                        </div>
+                        <img src="items/stars.png" alt="Projector Icon" class="reason-icon mt-3">
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="reason-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold">Create profiles for kids</h4>
+                            <p class="text-light mt-2">
+                                Send kids on adventures with their favourite characters in a space made just for them —
+                                free with your membership.
+                            </p>
+                        </div>
+                        <img src="items/card.png" alt="Kids Icon" class="reason-icon mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul class="accordion">
+            <li> <input type="radio" name="accordion" id="first"> <label for="first">What is Netflix?</label>
+                <div class="content">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies,
+                        anime, documentaries and more – on thousands of internet-connected devices.<br><br> You can
+                        watch as much as you want, whenever you want, without a single ad – all for one low monthly
+                        price. There's always something new to discover, and new TV shows and movies are added every
+                        week!</p>
+                </div>
+            </li>
+            <li> <input type="radio" name="accordion" id="second"> <label for="second">How much does Netflix
+                    cost?</label>
+                <div class="content">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                        fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                </div>
+            </li>
+            <li> <input type="radio" name="accordion" id="third"> <label for="third">Where can I watch?</label>
+                <div class="content">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                        netflix.com from your personal computer or on any internet-connected device that offers the
+                        Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+                        consoles.<br><br> You can also download your favourite shows with the iOS or Android app. Use
+                        downloads to watch while you're on the go and without an internet connection. Take Netflix with
+                        you anywhere.</p>
+                </div>
+            </li>
+            <li> <input type="radio" name="accordion" id="forth"> <label for="forth">How do I cancel?</label>
+                <div class="content">
+                    <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel
+                        your account online in two clicks. There are no cancellation fees – start or stop your account
+                        anytime.</p>
+                </div>
+            </li>
+            <li> <input type="radio" name="accordion" id="fifth"> <label for="fifth">What can I watch on
+                    Netflix?</label>
+                <div class="content">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                        Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </li>
+            <li> <input type="radio" name="accordion" id="sixth"> <label for="sixth">Is Netflix good for kids?</label>
+                <div class="content">
+                    <p>The Netflix Kids experience is included in your membership to give parents control while kids
+                        enjoy family-friendly TV shows and films in their own space.<br><br> Kids profiles come with
+                        PIN-protected parental controls that let you restrict the maturity rating of content kids can
+                        watch and block specific titles you don’t want kids to see.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ======= Call to Action Section ======= -->
+    <section class="cta-section">
+        <p class="cta-text">
+            Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <div class="cta-email-container">
+            <input type="email" placeholder="Email address" class="cta-input">
+            <button class="cta-btn">
+                Get Started <span>&#8250;</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ======= Footer Section ======= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-contact">
+                Questions? Call <a href="#">000-800-919-1743</a>
+            </p>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-lang">
+                <select>
+                    <option>English</option>
+                    <option>हिन्दी</option>
+                </select>
+            </div>
+
+            <p class="footer-country">Netflix India</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
