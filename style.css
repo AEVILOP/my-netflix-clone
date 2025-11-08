@@ -35,8 +35,13 @@ main .box {
 nav {
   z-index: 10;
   background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
 }
 
+/* Logo */
 .logo {
   width: 155px;
   height: auto;
@@ -44,9 +49,14 @@ nav {
   cursor: pointer;
 }
 
-/* Buttons container — Bootstrap handles flex, so only keep gap for consistency */
+/* Buttons container */
 .nav-buttons {
-  gap: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-wrap: nowrap;
+  /* Keep sign-in and language inline */
 }
 
 /* Hero Section */
@@ -64,30 +74,24 @@ nav {
   font-family: "Martel Sans", sans-serif;
 }
 
-/* Headline */
 .hero> :nth-child(1),
 .hero> :nth-child(2) {
   font-weight: 900;
   font-size: 3rem;
-  /* ≈48px */
   line-height: 1.2;
   text-align: center;
 }
 
-/* Subheading (₹149 line) */
 .hero> :nth-child(3) {
   font-weight: 600;
   font-size: 1.3rem;
-  /* ≈21px */
   margin-top: 8px;
   text-align: center;
 }
 
-/* Email section line */
 .hero> :nth-child(4) {
   font-weight: 400;
   font-size: 1rem;
-  /* ≈16px */
   line-height: 1.5;
   max-width: 700px;
   margin-top: 12px;
@@ -96,12 +100,11 @@ nav {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
   .hero> :nth-child(1),
   .hero> :nth-child(2) {
-    font-size: 2rem;
-    /* ≈32px */
+    font-size: 2.4rem;
   }
 
   .hero> :nth-child(3) {
@@ -109,69 +112,96 @@ nav {
   }
 
   .hero> :nth-child(4) {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero> :nth-child(1),
+  .hero> :nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 0 10px;
+  }
+
+  .hero> :nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .hero> :nth-child(4) {
     font-size: 0.9rem;
   }
 }
 
-
-/* Language button (Bootstrap keeps select style consistent) */
-.lang-btn {
-  background-color: rgba(128, 128, 128, 0.127) !important;
-  /* same as footer */
-  color: rgba(255, 255, 255, 0.938) !important;
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+/* Language and Sign-in Buttons */
+.lang-btn,
+.sign-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
   border-radius: 4px !important;
-  padding: 5px 25px !important;
-  font-size: 0.9rem !important;
   cursor: pointer;
-  outline: none;
-  appearance: none;
   transition: all 0.3s ease;
 }
 
-/* Hover + focus (Netflix-style red glow) */
+.lang-btn {
+  background-color: rgba(128, 128, 128, 0.127) !important;
+  color: rgba(255, 255, 255, 0.938) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  padding: 5px 25px !important;
+  font-size: 0.9rem !important;
+}
+
 .lang-btn:hover,
 .lang-btn:focus {
   border-color: #fffcfd !important;
   box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
 }
 
-/* Dropdown menu text (when opened) */
 .lang-btn option {
   color: black;
   background-color: white;
 }
 
-/* Sign-in button */
 .sign-btn {
   background-color: #e50914 !important;
-  /* Netflix red */
   color: white !important;
   border: none !important;
   padding: 8px 20px !important;
-  /* balanced size */
   font-size: 16px !important;
   font-weight: 700 !important;
-  border-radius: 4px !important;
-  cursor: pointer;
   line-height: 1.4 !important;
-  display: inline-block;
   transition: background 0.3s ease, transform 0.1s ease;
-  height: auto !important;
-  /* adjusts naturally */
-  min-width: 100px;
-  /* gives that wide look */
-  text-align: center;
 }
 
 .sign-btn:hover {
   background-color: #c11119 !important;
-  /* darker Netflix red */
   transform: scale(1.03);
-  /* smooth hover pop effect */
 }
 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-buttons {
+    gap: 10px;
+    flex-wrap: nowrap;
+    /* keep in same line */
+  }
 
+  .lang-btn,
+  .sign-btn {
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+  }
+
+  .logo {
+    width: 110px;
+  }
+}
 
 /* Get started section */
 .get-started-btn {
@@ -189,9 +219,13 @@ nav {
   background-color: #c10710 !important;
 }
 
-/* Email container — Bootstrap handles flex, keep margin */
+/* Email container */
 .email-container {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* Input box */
@@ -201,7 +235,7 @@ nav {
   border: none;
   border-radius: 4px;
   width: 380px;
-  max-width: 80%;
+  max-width: 90%;
   background-color: rgba(29, 27, 27, 0.762);
 }
 
@@ -213,9 +247,7 @@ nav {
   background-color: rgba(29, 27, 27, 0.9);
   color: white;
   border: 1px solid #ece9e9;
-  /* Netflix red glow */
   box-shadow: 0 0 5px rgba(229, 9, 20, 0.6);
-  /* subtle glow effect */
   outline: none;
 }
 
@@ -225,34 +257,18 @@ nav {
   background-color: rgba(128, 128, 128, 0.514);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .logo {
-    width: 110px;
-  }
-
-  .sign-btn,
-  .lang-btn {
-    font-size: 12px;
-    padding: 5px 12px;
-  }
-
-  .hero {
-    margin-top: 50px;
-  }
-}
-
 /* Trending Section */
 .trending-section {
   background: linear-gradient(to bottom, #0a0a0a, black);
   border-top: 4px solid #c11119;
-  /* Netflix red curve border */
   position: relative;
+  padding: 40px 5%;
 }
 
 .trending-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Movie Cards */
@@ -279,32 +295,22 @@ nav {
   font-size: 5rem;
   font-weight: 800;
   color: rgb(2, 2, 2);
-
   -webkit-text-stroke: 2px rgb(255, 252, 252);
   font-family: Arial, sans-serif;
-}
-
-/* Carousel controls customization */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
 }
 
 /* More Reasons Section */
 .reasons-section {
   background-color: black;
-  padding: 60px 0;
+  padding: 60px 5%;
 }
 
 .reasons-section h2 {
   font-size: 1.8rem;
   margin-bottom: 40px;
+  text-align: center;
 }
 
-/* Card Styling */
 .reason-card {
   background: linear-gradient(145deg, #1a093a, #0b0b0b);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -312,6 +318,7 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: white;
   height: 320px;
+  text-align: center;
 }
 
 .reason-card:hover {
@@ -319,7 +326,6 @@ nav {
   box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
 }
 
-/* Icon Styling */
 .reason-icon {
   width: 55px;
   height: auto;
@@ -327,33 +333,8 @@ nav {
   opacity: 0.9;
 }
 
-/* Text tweaks */
-.reason-card h5 {
-  font-size: 2.5rem;
-}
-
-.reason-card p {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .reasons-section h2 {
-    text-align: center;
-  }
-
-  .reason-card {
-    text-align: center;
-  }
-
-  .reason-icon {
-    align-self: center;
-  }
-}
-
 /* ========================
-   Netflix FAQ Section
+   FNetflix FAQ Section
 ======================== */
 .faq {
   background-color: black;
@@ -442,40 +423,12 @@ nav {
   transform: rotate(180deg);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .faq {
-    padding: 60px 5%;
-  }
-
-  .faq h2 {
-    font-size: 1.8rem;
-  }
-
-  .accordion label {
-    font-size: 1.1rem;
-    padding: 18px 20px;
-  }
-
-  .accordion .content p {
-    font-size: 0.95rem;
-    padding: 18px 20px;
-  }
-}
-
-/* ======= Call to Action Section ======= */
+/* CTA Section */
 .cta-section {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 10px 20px;
-
-}
-
-.cta-text {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 50px 20px;
 }
 
 .cta-email-container {
@@ -494,13 +447,6 @@ nav {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  font-size: 16px;
-  transition: border 0.3s ease;
-}
-
-.cta-input:focus {
-  outline: none;
-  border: 1px solid #e50914;
 }
 
 .cta-btn {
@@ -522,14 +468,13 @@ nav {
   background-color: #c11119;
 }
 
-/* ======= Footer Section ======= */
+/* Footer */
 .footer {
   background-color: black;
   color: rgba(255, 255, 255, 0.7);
-  padding: 60px 12%;
+  padding: 60px 8%;
   font-size: 0.9rem;
 }
-
 .footer a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: underline;
@@ -541,67 +486,41 @@ nav {
   text-decoration: underline;
 }
 
-.footer-contact {
-  margin-bottom: 25px;
-}
 
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px 25px;
-  margin-bottom: 30px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
 }
 
 .footer-lang select {
-  background-color: rgba(128, 128, 128, 0.282);
+  background-color: rgba(0, 0, 0, 0.282);
   color: rgba(255, 255, 255, 0.938);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.116);
   border-radius: 4px;
   padding: 5px 25px;
   font-size: 0.9rem;
   cursor: pointer;
-  cursor: pointer;
   outline: none;
-  appearance: none;
 }
 
-/* ✅ Dropdown text color when opened */
-.footer-lang select option {
-  color: black;
-  /* text inside dropdown */
-  background-color: white;
-  /* background for dropdown items */
-}
+/* Responsive Footer */
+@media (max-width: 480px) {
 
-
-
-
-.footer-country {
-  margin-top: 25px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .cta-section {
-    padding: 40px 10px;
-  }
-
+  .get-started-btn,
   .cta-btn {
     width: 90%;
-    justify-content: center;
+    font-size: 1rem;
   }
 
+  .input,
   .cta-input {
     width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .faq {
+    padding: 50px 5%;
   }
 
   .footer {
