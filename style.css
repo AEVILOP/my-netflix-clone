@@ -99,162 +99,110 @@ nav {
   text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-
-  .hero> :nth-child(1),
-  .hero> :nth-child(2) {
-    font-size: 2.4rem;
-  }
-
-  .hero> :nth-child(3) {
-    font-size: 1.1rem;
-  }
-
-  .hero> :nth-child(4) {
-    font-size: 0.95rem;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .hero> :nth-child(1),
-  .hero> :nth-child(2) {
-    font-size: 2rem;
-  }
-
-  .hero {
-    padding: 0 10px;
-  }
-
-  .hero> :nth-child(3) {
-    font-size: 1rem;
-  }
-
-  .hero> :nth-child(4) {
-    font-size: 0.9rem;
-  }
-}
-
-/* Language and Sign-in Buttons */
-.lang-btn,
-.sign-btn {
+.trending_conatiner {
   display: inline-flex;
-  align-items: center;
+  gap: 20px;
+}
+
+.movie-card {
+    width: calc(20% - 16px); /* 20% for 5 cards, minus gap */
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.movie_card {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    cursor: grab;
+    user-select: none;
+    width: max-content;
+    margin: 0;
+}
+
+/* Ensure container allows controls to sit outside */
+.trending-section .container {
+  position: relative;
+  overflow: visible; /* allow buttons to be visible outside the container */
+  margin: 0 auto;
+}
+
+/* Keep carousel full width but leave space so cards don't touch buttons */
+#trendingCarousel {
+  position: relative;
+  width: 96%;
+  /* padding: 0 64px; */
+}
+
+/* make inner strictly hide overflow for cards, but outer container shows controls */
+.carousel-inner {
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+/* Circular vertically-centered buttons positioned outside the card area */
+.carousel-control-prev,
+.carousel-control-next {
+  /* width: 48px;
+  height: 48px; */
+  background-color: #ffffff;
+  /* border: none; */
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+  transform: translateY(-50%);
+  z-index: 30;
+  /* display: flex; */
+  /* align-items: center; */
   justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px !important;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  /* border-radius: 50%; */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  opacity: 1;
+  
+  height: 7.5rem;
+    width: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
 }
 
-.lang-btn {
-  background-color: rgba(128, 128, 128, 0.127) !important;
-  color: rgba(255, 255, 255, 0.938) !important;
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  padding: 5px 25px !important;
-  font-size: 0.9rem !important;
+/* place them outside the movie cards area */
+.carousel-control-prev {
+  left: -24px; /* half of button width -> sits just outside */
 }
 
-.lang-btn:hover,
-.lang-btn:focus {
-  border-color: #fffcfd !important;
-  box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+.carousel-control-next {
+  right: -24px;
 }
 
-.lang-btn option {
-  color: black;
-  background-color: white;
+/* improve hover state */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ffffff;
 }
 
-.sign-btn {
-  background-color: #e50914 !important;
-  color: white !important;
-  border: none !important;
-  padding: 8px 20px !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-  transition: background 0.3s ease, transform 0.1s ease;
+/* keep the default icon visible and centered */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 18px 18px; /* slightly smaller icon inside circular button */
 }
 
-.sign-btn:hover {
-  background-color: #c11119 !important;
-  transform: scale(1.03);
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .nav-buttons {
-    gap: 10px;
-    flex-wrap: nowrap;
-    /* keep in same line */
-  }
-
-  .lang-btn,
-  .sign-btn {
-    font-size: 12px !important;
-    padding: 5px 12px !important;
-  }
-
-  .logo {
-    width: 110px;
-  }
-}
-
-/* Get started section */
-.get-started-btn {
-  background-color: #e50914 !important;
-  color: white !important;
-  border: none;
-  padding: 15px 48px;
-  font-size: 22px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.get-started-btn:hover {
-  background-color: #c10710 !important;
-}
-
-/* Email container */
-.email-container {
-  margin-top: 10px;
+/* ensure movie_card doesn't extend under the circular area — small left/right margin */
+.movie_card {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Input box */
-.input {
-  padding: 20px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  width: 380px;
-  max-width: 90%;
-  background-color: rgba(29, 27, 27, 0.762);
-}
-
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.input:focus {
-  background-color: rgba(29, 27, 27, 0.9);
-  color: white;
-  border: 1px solid #ece9e9;
-  box-shadow: 0 0 5px rgba(229, 9, 20, 0.6);
-  outline: none;
-}
-
-/* Separation line */
-.separation-curve {
-  height: 4px;
-  background-color: rgba(128, 128, 128, 0.514);
+  gap: 20px;
+  transition: transform 0.5s ease;
+  cursor: grab;
+  user-select: none;
+  width: max-content;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 16px;  /* small internal padding so first/last card not flush with edge */
+  padding-right: 16px;
 }
 
 /* Trending Section */
@@ -273,8 +221,9 @@ nav {
 
 /* Movie Cards */
 .movie-card {
-  width: 150px;
+  width: calc(20% - 200px); /* 20% for 5 cards, minus gap */
   transition: transform 0.3s ease;
+  flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
 .movie-card img {
@@ -530,4 +479,219 @@ nav {
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+
+  .hero> :nth-child(1),
+  .hero> :nth-child(2) {
+    font-size: 2.4rem;
+  }
+
+  .hero> :nth-child(3) {
+    font-size: 1.1rem;
+  }
+
+  .hero> :nth-child(4) {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero> :nth-child(1),
+  .hero> :nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 0 10px;
+  }
+
+  .hero> :nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .hero> :nth-child(4) {
+    font-size: 0.9rem;
+  }
+}
+
+/* Language and Sign-in Buttons */
+.lang-btn,
+.sign-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn {
+  background-color: rgba(128, 128, 128, 0.127) !important;
+  color: rgba(255, 255, 255, 0.938) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  padding: 5px 25px !important;
+  font-size: 0.9rem !important;
+}
+
+.lang-btn:hover,
+.lang-btn:focus {
+  border-color: #fffcfd !important;
+  box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+}
+
+.lang-btn option {
+  color: black;
+  background-color: white;
+}
+
+.sign-btn {
+  background-color: #e50914 !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.sign-btn:hover {
+  background-color: #c11119 !important;
+  transform: scale(1.03);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-buttons {
+    gap: 10px;
+    flex-wrap: nowrap;
+    /* keep in same line */
+  }
+
+  .lang-btn,
+  .sign-btn {
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+  }
+
+  .logo {
+    width: 110px;
+  }
+}
+
+/* Get started section */
+.get-started-btn {
+  background-color: #e50914 !important;
+  color: white !important;
+  border: none;
+  padding: 15px 48px;
+  font-size: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #c10710 !important;
+}
+
+/* Email container */
+.email-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Input box */
+.input {
+  padding: 20px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 380px;
+  max-width: 90%;
+  background-color: rgba(29, 27, 27, 0.762);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+  background-color: rgba(29, 27, 27, 0.9);
+  color: white;
+  border: 1px solid #ece9e9;
+  box-shadow: 0 0 5px rgba(229, 9, 20, 0.6);
+  outline: none;
+}
+
+/* Separation line */
+.separation-curve {
+  height: 4px;
+  background-color: rgba(128, 128, 128, 0.514);
+}
+
+/* Trending Section */
+.trending-section {
+  background: linear-gradient(to bottom, #0a0a0a, black);
+  border-top: 4px solid #c11119;
+  position: relative;
+  padding: 40px 5%;
+}
+
+.trending-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.trending_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-nav-buttons {
+    flex: 0 0 auto;
+    z-index: 10;
+}
+
+#trendingCarousel {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 120px); /* Accounting for button width on both sides */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* border-radius: 4px; */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.movie_card {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
 }

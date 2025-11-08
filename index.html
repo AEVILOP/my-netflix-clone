@@ -49,68 +49,69 @@
         <div class="container">
             <h2 class="text-white fw-bold mb-4">Trending Now</h2>
 
-            <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="trending_container">
+                <button class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
 
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card1.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">1</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card2.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">2</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card3.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">3</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/crad4.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">4</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card5.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">5</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card6.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">6</span>
-                            </div>
-                            <!-- Movie 1 -->
-                            <div class="movie-card position-relative">
-                                <img src="items/card7.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">7</span>
-                            </div>
-                            <div class="movie-card position-relative">
-                                <img src="items/card8.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">8</span>
-                            </div>
-                            <div class="movie-card position-relative">
-                                <img src="items/card9.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">9</span>
-                            </div>
-                            <div class="movie-card position-relative">
-                                <img src="items/card10.jpg" class="img-fluid rounded" alt="Movie 1">
-                                <span class="movie-rank">10</span>
+                <div id="trendingCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="movie_card">
+
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card1.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">1</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card2.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">2</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card3.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">3</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/crad4.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">4</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card5.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">5</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card6.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">6</span>
+                                </div>
+                                <!-- Movie 1 -->
+                                <div class="movie-card position-relative">
+                                    <img src="items/card7.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">7</span>
+                                </div>
+                                <div class="movie-card position-relative">
+                                    <img src="items/card8.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">8</span>
+                                </div>
+                                <div class="movie-card position-relative">
+                                    <img src="items/card9.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">9</span>
+                                </div>
+                                <div class="movie-card position-relative">
+                                    <img src="items/card10.jpg" class="img-fluid rounded" alt="Movie 1">
+                                    <span class="movie-rank">10</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Carousel controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#trendingCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#trendingCarousel"
-                    data-bs-slide="next">
+
+                <button class="carousel-control-next" type="button">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -293,6 +294,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
